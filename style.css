@@ -1,0 +1,324 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: #4c40f7;
+    color: #333;
+    scroll-behavior: smooth;
+    background-image: url();
+  }
+
+  
+  
+  /* Header with background image */
+  header {
+    background: url("csc,html.jpg") no-repeat center center/cover;
+    color: #f1c0c7;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+  }
+  
+  header::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5); /* dark overlay */
+    z-index: 0;
+  }
+  
+  header h1, header p {
+    position: relative;
+    z-index: 1;
+  }
+  
+  header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+  }
+  
+  /* Navigation */
+  nav {
+    background: #023f6e;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    color: #fff;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s;
+  }
+  
+  nav a:hover {
+    background: #005fa3;
+  }
+  
+  /* Section Styling */
+  section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #0077cc;
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+  
+  
+  /* Card look for each section */
+  section {
+    background: #fff;
+    margin-top: 30px;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  }
+  
+  /* Contact Links */
+  .contact-links {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .contact-links a {
+    display: inline-block;
+    margin: 5px;
+    text-decoration: none;
+    background: #0077cc;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  
+  .contact-links a:hover {
+    background: #005fa3;
+    transform: scale(1.05);
+  }
+  
+  /* Forms */
+  form {
+    margin-top: 20px;
+  }
+  
+  form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  form button {
+    background: #0077cc;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  form button:hover {
+    background: #0388e7;
+    transform: translateY(-2px);
+  }
+  
+  /* From Uiverse.io by adamgiebl */ 
+button {
+  font-family: inherit;
+  font-size: 20px;
+  background: royalblue;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+button:hover span {
+  transform: translateX(5em);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    background: #0077cc;
+    color: #fff;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2rem;
+    }
+    header p {
+      font-size: 1rem;
+    }
+    nav {
+      flex-direction: column;
+    }
+    nav a {
+      text-align: center;
+      padding: 12px;
+    }
+    section {
+      padding: 30px 20px;
+    }
+  }
+  /* From Uiverse.io by SelfMadeSystem */ 
+.absolute {
+  position: absolute;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.loader {
+  display: flex;
+  margin: 0.25em 0;
+}
+
+.w-2 {
+  width: 0.5em;
+}
+
+.dash {
+  animation: dashArray 2s ease-in-out infinite,
+    dashOffset 2s linear infinite;
+}
+
+.spin {
+  animation: spinDashArray 2s ease-in-out infinite,
+    spin 8s ease-in-out infinite,
+    dashOffset 2s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes dashArray {
+  0% {
+    stroke-dasharray: 0 1 359 0;
+  }
+
+  50% {
+    stroke-dasharray: 0 359 1 0;
+  }
+
+  100% {
+    stroke-dasharray: 359 1 0 0;
+  }
+}
+
+@keyframes spinDashArray {
+  0% {
+    stroke-dasharray: 270 90;
+  }
+
+  50% {
+    stroke-dasharray: 0 360;
+  }
+
+  100% {
+    stroke-dasharray: 270 90;
+  }
+}
+
+@keyframes dashOffset {
+  0% {
+    stroke-dashoffset: 365;
+  }
+
+  100% {
+    stroke-dashoffset: 5;
+  }
+}
+
+@keyframes spin {
+  0% {
+    rotate: 0deg;
+  }
+
+  12.5%,
+  25% {
+    rotate: 270deg;
+  }
+
+  37.5%,
+  50% {
+    rotate: 540deg;
+  }
+
+  62.5%,
+  75% {
+    rotate: 810deg;
+  }
+
+  87.5%,
+  100% {
+    rotate: 1080deg;
+  }
+}
